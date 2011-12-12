@@ -2,15 +2,17 @@
 #Steven Gregory & JMatt Peterson
 #v 0.1.0
 
-#Distribution Information
-. ./getOpts.sh
-. ./distro.sh
-echo "stuff"
-exit
+#Distribution Information#####
+if [ -z "$GETOPT" ]; then
+	. ./getOpts.sh
+fi
+if [ -z "$DISTRO" ]; then
+	. ./distro.sh
+fi
 #ENVIRONMENTAL VARIABLE SETUP#
 export PATH=$PATH:/usr/local/bin
 
-###INSTALL NODE JS###
+###INSTALL NODE JS############
 wget http://nodejs.org/dist/v0.6.4/node-v0.6.4.tar.gz
 tar -xzvf node-v0.6.4.tar.gz
 cd node-v0.6.4
@@ -18,7 +20,7 @@ cd node-v0.6.4
 make
 sudo make install
 
-###INSTALL NPM###
+#########INSTALL NPM##########
 curl http://npmjs.org/install.sh > install.npm.sh
 sudo -E sh ./install.npm.sh
 

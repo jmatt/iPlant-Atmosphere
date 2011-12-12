@@ -20,6 +20,15 @@ do
                     exit 1;;
         esac
 done
-
 #Pre-Processing
-# Is directory writeable, does it exist, create if not.. 
+if [ ! -d $INSTALL_DIR ]
+then
+	mkdir -p $INSTALL_DIR
+	if [ ! -d $INSTALL_DIR ]
+	then
+		echo "Unable to create installation directory"
+		exit 1
+	fi
+fi
+
+export GETOPT=true
