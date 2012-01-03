@@ -18,3 +18,4 @@ sh py.sh
 sh nodejs.sh
 sh redis.sh
 sh faye.sh
+sh rabbitmq.sh
