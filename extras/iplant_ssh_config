@@ -1,0 +1,22 @@
+##
+# iPlant Collaborative aliases
+#
+##
+Host atmotest3
+     Port 1657
+     HostName atmotest3.iplantcollaborative.org
+Host atmotest2
+     Port 1657
+     HostName atmotest2.iplantcollaborative.org
+Host atmotest1
+     Port 1657
+     HostName atmotest1.iplantcollaborative.org
+Host bond
+     Port 1657
+     HostName bond.iplantcollaborative.org
+Host atmo-beta
+     Port 1657
+     HostName bond.iplantcollaborative.org
+Host howe
+     Port 1657
+     HostName howe.iplantcollaborative.org
