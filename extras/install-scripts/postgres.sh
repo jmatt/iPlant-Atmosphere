@@ -1,17 +1,17 @@
 #!/bin/bash
 #
-# nodejs install. http://nodejs.org/
+# Postgres 8.x
 #
 # Steven Gregory & JMatt Peterson (:twitter "@jmatt" :email "jmatt@iplantcollaborative.org")
-#
 # Changes
-# v 0.1.0 - created 
+# v 0.1.1 - created
+ 
 
-
-#Distribution Information#####
+#Options Information##########
 if [ -z "$GETOPT" ]; then
 	. ./getOpts.sh
 fi
+#Distribution Information#####
 if [ -z "$DISTRO" ]; then
 	. ./distro.sh
 fi
@@ -30,4 +30,3 @@ sudo make install
 #########INSTALL NPM##########
 curl http://npmjs.org/install.sh > install.npm.sh
 sudo -E sh ./install.npm.sh
-

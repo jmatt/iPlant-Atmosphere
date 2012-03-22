@@ -140,6 +140,9 @@ def auth_emulate_response(request):
 
 
 def validate_token(request):
+    """
+    Check token time out to determine authenticity.
+    """
     if request.META.has_key('HTTP_X_AUTH_USER') and request.META.has_key('HTTP_X_AUTH_TOKEN') :
         user = request.META['HTTP_X_AUTH_USER']
         token = request.META['HTTP_X_AUTH_TOKEN']
@@ -150,9 +153,9 @@ def validate_token(request):
         except Tokens.DoesNotExist:
             return HttpResponse("401 UNAUTHORIZED", status=401)
         
-        d = timedelta(days=1)
+        d = timedelta(minutes=2)
         
-        if token.user == user and token.logout == None and ( token.issuedTime + d > datetime.datetime.now() ) and token.api_server_url == api_server :
+        if token.user == user and token.logout is None and ( token.issuedTime + d > datetime.datetime.now() ) and token.api_server_url == api_server:
             return HttpResponse("Valid token")
         else:
             return HttpResponse("401 UNAUTHORIZED", status=401)

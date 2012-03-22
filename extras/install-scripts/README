@@ -3,3 +3,39 @@ These scripts are used to install Atmosphere and it's dependencies.
   sudo source atmo.sh
 
 to install Atmosphere and all it's dependencies.
+
+
++ atmo.sh
+
+  - distro.sh
+
+    Provide information on the distro.
+
+  - euca2ools.sh
+
+    Install euca2ools.
+
+  - faye.sh
+
+    Install and configure faye.
+
+  - getOpts.sh
+
+    Provide and handle options.
+
+  - packages.sh
+
+    Install required packages.
+
+  - py.sh
+
+    Install and configure python and any python dependencies.
+
+  - postgres.sh
+
+    Install and configure postgres database for atmosphere.
+
+  - nodejs.sh
+
+    Install and configure nodejs and npm.
+
