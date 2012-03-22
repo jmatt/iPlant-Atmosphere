@@ -1,8 +1,7 @@
-
 #jmatt
 CREATE ROLE jmatt PASSWORD 'atmosphere' SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN;
 
-GRANT ALL PRIVILEGES ON DATABASE atmosphere TO esteve;
+GRANT ALL PRIVILEGES ON DATABASE atmosphere TO jmatt;
 
 GRANT ALL ON TABLE cloudauth_configs to jmatt;
 GRANT ALL ON TABLE cloudauth_tokens to jmatt;
